@@ -23,6 +23,7 @@ interface CatBreed {
   styleUrl: './home.component.scss',
   imports: [
     CommonModule,
+
     MatButtonModule,
     HttpClientModule,
     AutoCompleteComponent,
