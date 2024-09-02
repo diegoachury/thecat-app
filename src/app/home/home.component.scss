@@ -1,0 +1,52 @@
+.home-container {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 420px;
+  margin: 0 auto;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
+.impt-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  .in-width {
+    width: 100%;
+    position: relative;
+    top: 10px;
+  }
+  .btn-icon {
+    margin-left: 10px;
+    //border-radius: 50%;
+  }
+}
+
+.card-breeds {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  flex-direction: column;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  .corousel {
+    max-width: 100%;
+    overflow: hidden;
+    img {
+      max-width: 100%;
+      height: 200px;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  a {
+    max-width: 100px;
+    color: palevioletred;
+  }
+}

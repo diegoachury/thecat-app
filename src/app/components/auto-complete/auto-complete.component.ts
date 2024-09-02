@@ -17,6 +17,7 @@ interface CatBreed {
   id: string;
   name: string;
   description: string;
+  wikipedia_url: string;
 }
 
 @Component({

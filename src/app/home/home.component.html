@@ -1,26 +1,45 @@
 <div class="container">
   <div>
-    <span>Mi Aplicación Angular</span>
     <div class="home-container">
+      <mat-toolbar>
+        <span>THE CATS</span>
+        <span class="example-spacer"></span>
+        <button mat-icon-button>
+          <mat-icon>person</mat-icon>
+        </button>
+        <button mat-icon-button>
+          <mat-icon>login</mat-icon>
+        </button>
+      </mat-toolbar>
       <div>
-        <p>Autocomplete</p>
-        <app-auto-complete
-          [items]="catBreeds"
-          (selectionChange)="handleSelection($event)"
-          [resetInput]="resetAutocomplete"
-        ></app-auto-complete>
-        <button (click)="clearSelection()">Clear Selection</button>
+        <div class="impt-center">
+          <app-auto-complete
+            class="in-width"
+            [items]="catBreeds"
+            (selectionChange)="handleSelection($event)"
+            [resetInput]="resetAutocomplete"
+          ></app-auto-complete>
+          <button mat-icon-button class="btn-icon" (click)="clearSelection()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
         <ul *ngIf="filteredCatBreeds.length">
           <li *ngFor="let breed of filteredCatBreeds">
-            {{ breed.id }}: {{ breed.name }} - {{ breed.description }}
+            <div class="card-breeds">
+              <h3>{{ breed.id }} - {{ breed.name }}</h3>
+              <div class="corousel">
+                <owl-carousel-o [options]="customOptions">
+                  <ng-template carouselSlide *ngFor="let img of breed.images">
+                    <img [src]="img.url" [alt]="img" />
+                  </ng-template>
+                </owl-carousel-o>
+              </div>
+              <p>{{ breed.description }}</p>
+              <a mat-button href="{{ breed.wikipedia_url }}">Wikipedia</a>
+            </div>
           </li>
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="content">
-    <h1>¡Bienvenido a mi página principal!</h1>
-    <p>Este es el contenido de mi página principal.</p>
   </div>
 </div>
