@@ -1,1 +1,22 @@
-<router-outlet />
+<div class="home-container">
+  <mat-toolbar>
+    <button mat-icon-button routerLink="/">
+      <mat-icon>home</mat-icon>
+    </button>
+    <span>THE CATS</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button>
+      <mat-icon>person</mat-icon>
+    </button>
+    <button mat-button routerLink="/signup">
+      <span>Register</span>
+      <mat-icon>add</mat-icon>
+    </button>
+    <button mat-button routerLink="/login">
+      <span>Iniciar</span>
+      <mat-icon>login</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <router-outlet />
+</div>

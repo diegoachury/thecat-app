@@ -1,24 +1,31 @@
 <div class="login-container">
   <form (ngSubmit)="onSubmit()">
-    <label for="email">Email:</label>
-    <input
-      type="email"
-      id="email"
-      [(ngModel)]="user.email"
-      name="email"
-      required
-    />
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input
+        matInput
+        type="email"
+        id="email"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+        placeholder="Ex. pat@example.com"
+      />
+    </mat-form-field>
 
-    <label for="password">Password:</label>
-    <input
-      type="password"
-      id="password"
-      [(ngModel)]="user.password"
-      name="password"
-      required
-    />
+    <mat-form-field class="example-full-width">
+      <mat-label>Password</mat-label>
+      <input
+        matInput
+        type="password"
+        id="password"
+        [(ngModel)]="user.password"
+        name="password"
+        required
+      />
+    </mat-form-field>
 
-    <button type="submit">Login</button>
+    <button mat-flat-button type="submit">Login</button>
     <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
   </form>
 </div>

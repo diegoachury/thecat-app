@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { AutoCompleteComponent } from '../components/auto-complete/auto-complete.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { RouterLink } from '@angular/router';
 
 interface CatBreed {
   id: string;
@@ -23,10 +24,10 @@ interface CatBreed {
   styleUrl: './home.component.scss',
   imports: [
     CommonModule,
-
-    MatButtonModule,
+    RouterLink,
     HttpClientModule,
     AutoCompleteComponent,
+    MatButtonModule,
     MatIconModule,
     MatToolbarModule,
     CarouselModule,

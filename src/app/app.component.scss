@@ -1,0 +1,11 @@
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 420px;
+  margin: 0 auto;
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+}
